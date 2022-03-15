@@ -1,4 +1,4 @@
-const taskInput = document.querySelector(".todo-input input");
+const todoInput = document.querySelector(".todo-input input");
 const filters = document.querySelectorAll(".items-statuses span");
 const clearAll = document.querySelector(".items-clear");
 const taskBox = document.querySelector(".task-box");
@@ -81,8 +81,8 @@ clearAll.addEventListener("click", () => {
 
 
 //fetch the value from the input tag and save it in the local Storage and put into the todo task array
-taskInput.addEventListener("keyup", e => {
-    let newTodo = taskInput.value.trim();
+todoInput.addEventListener("keyup", e => {
+    let newTodo = todoInput.value.trim();
     if(e.key == "Enter" && newTodo) {
         if(!todos) {
             todos = []
@@ -91,7 +91,7 @@ taskInput.addEventListener("keyup", e => {
             
         let taskInfo = {name: newTodo, status: "pending"};
         todos.push(taskInfo);
-        taskInput.value = "";
+        todoInput.value = "";
         localStorage.setItem("todo-list", JSON.stringify(todos));
         showTodo(document.querySelector("span.active").id);
         leftItems.innerHTML = todos.length;
