@@ -1,0 +1,254 @@
+
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins:wght@400;500&display=swap');
+
+/* set default margin and padding 0*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+} 
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    background-color: blueviolet;
+}
+
+/*whole wrapper of todo*/
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0px 30px;
+    background: #fff;
+    margin-top: 200px;
+    padding: 28px 0;
+    position: absolute;
+    /* max-height: 400px; */
+    overflow: hidden;
+    /* margin-bottom: 200px; */
+}
+
+
+/* .todo-logo i {
+    color: white;
+    font-size: 42px;
+    margin-top: 90px;
+    position: absolute;
+} */
+
+/* heading of the todo app*/
+h4 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    margin: 75px;
+    position: relative;
+}
+
+/*style the input div*/
+.todo-input {
+    height: 62px;
+    padding: 0 25px;
+    position: relative; 
+}
+
+/*logo inside the input field*/
+.todo-input img {
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    transform: translate(17px, -50%); 
+}
+
+/*styling the input field*/
+.todo-input input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 22px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    background-color: rgb(231, 229, 229);
+    padding: 0 20px 0 53px;
+}
+
+.todo-input input::placeholder {
+    color: #bfbfbf;
+}
+
+/*styling of task box container*/
+.task-box {
+    margin: 20px 25px;
+    border-top: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-box.overflow {
+    overflow: auto;
+    max-height: 300px;
+}
+
+.task-box::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+.task-box .task {
+    list-style: none;
+    display: flex;
+    /* padding-top: 18px; */
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    font-size: 17px;
+    margin-bottom: 8px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.task-box .task:first-child {
+    padding-top: 6px;
+}
+
+.task-box .task:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.task label{
+    
+    display: flex;
+}
+
+.task label input {
+    color: blue;
+    background-color: #1798fb;
+}
+
+.task label p.checked {
+    text-decoration: line-through;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task label input {
+    margin-top: 6px;
+    margin-right: 12px;
+}
+
+.task {
+    padding-left: 11px
+}
+
+/*styling of the items info section*/
+.todo-items-info {
+    width: 100%;
+    height: 70px;
+    color: hsl(230, 18%, 7%);
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+}
+
+.items-statuses {
+    display: flex;
+    justify-content: center;
+}
+
+.items-statuses span {
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+/*style the delete todo icon*/
+.delete-todo img {
+    padding-right: 20px;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    color:hsl(230, 18%, 7%);
+}
+
+.delete-todo img:hover {
+    /* font-size: 18px; */
+    /* background-color: yellow; */
+    /* color: yellow; */
+    display: block;
+}
+
+/*task box transition*/
+.task-box li {
+   transition: transform 250ms;
+}
+
+.task-box li:hover {
+    transform: scale(1.05);
+    /* background-color: #ccc; */
+    width: 100%;
+}
+
+
+.items-statuses span:hover, .items-statuses span.active, .items-clear:hover {
+    color: #3c87ff;
+}
+
+/*styling clear all button*/
+.items-clear:hover {
+    outline: none;
+    border: none;
+    background: linear-gradient(135deg, #1798fb 0%, #2D5CFE 100%);
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #fff;
+    padding: 7px 13px;
+    transition: ease 0.8s;
+}
+
+/*media query for small devices*/
+@media (max-width: 400px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .container {
+        padding: 20px 0;
+    }
+
+    .items-statuses span{
+        margin: 0 5px;
+    }
+
+    .todo-input {
+        padding: 0 20px;
+    }
+
+    .todo-items-info {
+        padding: 18px 20px;
+    }
+
+    .task-box {
+        margin-top: 20px;
+        margin-right: 5px;
+        padding: 0 15px 10px 20px;
+    }
+
+    .task label input {
+        margin-top: 4px;
+    }
+}

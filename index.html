@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>TODO App</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome cdn Link For Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+  <body>
+    <!--**** div for page heading****-->
+    <div class="todo-logo">
+      <!-- <i class="fas fa-tasks"></i> -->
+      <h4>TODO</h4>
+    </div>
+    
+    <!--******* container for input feild, todo list*******-->
+    <div class="container">
+      <!--***** input field container with logo ******-->
+      <div class="todo-input">
+        <img src="document-text-outline.svg" alt="icon">
+        <input type="text" placeholder="Create a new todo....">
+      </div>
+
+      <!--contianer for todo list -->
+      <div>
+        <ul class="task-box">
+        </ul>
+        </div>
+      
+
+      <!--*****section for other feteaures like items left, completed, active and clear all*****-->
+      <div class="todo-items-info">
+        <!--****div for task left***-->
+        <div class="left-items">
+            <span class="items-number">5</span> items left
+        </div>
+        <!--****div for view task seperately*****-->
+        <div class="items-statuses">
+          <span class="active" id="all">All</span>
+          <span id="pending">Active</span>
+          <span id="completed">Completed</span>
+        </div>
+        <!--*******button to delete all todo items ******-->
+        <span class="items-clear">Clear All</span>
+      </div>
+      
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
